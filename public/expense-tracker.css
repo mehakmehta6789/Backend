@@ -1,0 +1,194 @@
+/* Reset & Base Styles */
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  background: radial-gradient(circle, rgba(108,125,90,1) 0%, rgba(185,194,177,1) 26%, rgba(255,255,255,1) 74%);
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #6c7d5a;
+  height: 70px;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+  font-size: 1.1em;
+  padding: 0.5em 1em;
+}
+
+/* Container */
+main .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+/* Balance Section */
+.balanceHead {
+  height: 6rem;
+  width: 35rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #6c7d5a;
+  color: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0 1rem;
+}
+
+/* Budget Form Section */
+.formContainer {
+  width: 35rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  background-color: white;
+  margin: 1rem 0;
+  border: 1px solid #6c7d5a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formContainer h3 {
+  font-family: 'Libre Baskerville', serif;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+
+.budgetInput,
+form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+input[type="number"],
+input[type="date"],
+select {
+  width: 24%;
+  height: 2.8rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #6c7d5a;
+  padding: 0 0.6rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input.error,
+select.error {
+  border-color: red;
+}
+
+button {
+  width: 23%;
+  height: 2.8rem;
+  color: white;
+  background-color: #6c7d5a;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #5e6e4f;
+}
+
+/* Overview Section */
+.overview {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Expense List */
+.expenseList {
+  width: 35rem;
+  margin: 2rem 0;
+  background-color: white;
+  border-radius: 1rem;
+  border: 1px solid #6c7d5a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.expenseList h2 {
+  font-family: 'Libre Baskerville', serif;
+  padding: 1rem 1.5rem 0 1.5rem;
+  font-size: 1.5rem;
+}
+
+.expenseList table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+.expenseList thead tr {
+  background-color: #f9f9f9;
+  border-bottom: 2px solid #6c7d5a;
+}
+
+.expenseList thead td {
+  padding: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+}
+
+.expenseList tbody td {
+  padding: 0.8rem;
+  text-align: center;
+  color: #444;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Remove Button */
+.removebtn {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.removebtn:hover {
+  background-color: #c82333;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .balanceHead,
+  .formContainer,
+  .expenseList,
+  .overview {
+    width: 95%;
+  }
+
+  input[type="number"],
+  input[type="date"],
+  select,
+  button {
+    font-size: 0.9rem;
+  }
+
+  .expenseList table {
+    font-size: 0.9rem;
+  }
+
+  .removebtn {
+    padding: 0.3rem 0.6rem;
+  }
+}
